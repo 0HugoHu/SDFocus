@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sdzx.news"
+    android:versionCode="1031"
+    android:versionName="@string/version_name" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".SDFocus"
+        android:allowBackup="true"
+        android:icon="@drawable/new_icon1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowTranslucentNavigation="true" >
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.avos.avoscloud.feedback.ThreadActivity" >
+        </activity>
+
+        <service
+            android:name="com.avos.avoscloud.PushService"
+            android:exported="true" />
+
+        <activity android:name="com.avos.avoscloud.search.SearchActivity" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+			android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReaderActivity"
+            android:label="详情"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105167874" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".CommentActivity"
+            android:label="评论"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MySearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InitActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EditMainActivity"
+            android:label="@string/version_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EditActivity"
+            android:label="详情"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".UpdateApkActivity"
+            android:label="@string/version_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.sdzx.imagescan.ShowImageActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".UserActivity"
+            android:label="@string/title_activity_user"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".PictureYulanActivity"
+            android:label="@string/title_activity_picture_yulan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".SignUp2Activity" >
+        </activity>
+        <activity android:name=".ForgetPassActivity" >
+        </activity>
+        <activity android:name=".HelpActivity" >
+        </activity>
+        <activity android:name=".FirstActivity" >
+        </activity>
+    </application>
+
+</manifest>
