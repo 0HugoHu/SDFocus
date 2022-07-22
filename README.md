@@ -1,5 +1,5 @@
 # SDFocus
-A campus forum App created by Chengdu Shude Middle School（成都树德中学）students.
+A campus forum App created by Chengdu Shude High School（成都树德中学）students.
 
 # Notice
 This application was developed during **2015 to 2016**. The technology used in the project is inevitably outdated. The server has stopped renewing, so the application is no longer functioning properly. Special thanks to the main contributor @Jerry笑.
