@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".EditActivity"
+	android:fitsSystemWindows="true">
+
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+			<android.support.v7.widget.Toolbar
+				android:id="@+id/edittoolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				app:layout_collapseMode="pin"
+				app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+	</android.support.design.widget.AppBarLayout>
+
+
+	<RelativeLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:layout_marginTop="?attr/actionBarSize"
+		android:orientation="horizontal">
+
+	<ScrollView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="9000dp"
+				android:textSize="0dp"/>
+
+			<android.support.design.widget.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_marginTop="5dp"
+				android:layout_height="wrap_content">
+
+
+				<EditText
+					android:layout_height="wrap_content"
+					android:inputType="textMultiLine"
+					android:ems="10"
+					android:layout_width="match_parent"
+					android:hint="标题"
+					android:imeOptions="actionUnspecified"
+					android:id="@+id/titleEditText1"/>
+			</android.support.design.widget.TextInputLayout>
+
+			<android.support.design.widget.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<EditText
+					android:layout_height="wrap_content"
+					android:inputType="textMultiLine"
+					android:ems="10"
+					android:layout_width="match_parent"
+					android:hint="摘要(可不填)"
+					android:id="@+id/summaryEditText1"/>
+			</android.support.design.widget.TextInputLayout>
+
+
+
+			<android.support.design.widget.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<EditText
+					android:layout_height="match_parent"
+					android:inputType="textMultiLine"
+					android:ems="10"
+					android:layout_width="match_parent"
+					android:hint="内容"
+					android:id="@+id/messageEditText1"
+					android:minLines="12"/>
+				</android.support.design.widget.TextInputLayout>
+
+
+			<HorizontalScrollView
+				android:layout_height="100dp"
+				android:layout_margin="5dp"
+				android:layout_width="wrap_content">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:id="@+id/editlayoutLinearLayout1">
+
+				</LinearLayout>
+
+			</HorizontalScrollView>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	</RelativeLayout>
+
+	<android.support.design.widget.FloatingActionButton
+		android:id="@+id/editfab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|end"
+		android:onClick="onSendClick"
+		android:layout_margin="@dimen/fab_margin"
+		android:src="@drawable/ic_send_white_3x" />
+
+</android.support.design.widget.CoordinatorLayout>

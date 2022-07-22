@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment
+    android:id="@+id/shetuan_Fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="com.sdzx.news.views.PageFragment1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</fragment>

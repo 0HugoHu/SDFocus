@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/commenttoolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+	
+	<RelativeLayout
+		android:id="@+id/main_lyt1"
+		android:layout_width="match_parent"
+		android:layout_marginTop="?attr/actionBarSize"
+		android:layout_height="wrap_content">
+
+
+		<android.support.v7.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			card_view:cardElevation="4dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:gravity="left|center">
+
+
+		<LinearLayout
+			android:id="@+id/swipe_container"
+			android:layout_width="match_parent"
+			android:gravity="bottom|right"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+
+
+			<!--  
+			<ListView
+			android:id="@+id/commentlistview"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			</ListView>
+			-->
+		</LinearLayout>
+		</android.support.v7.widget.CardView>
+
+	</RelativeLayout>
+
+	<android.support.design.widget.FloatingActionButton android:id="@+id/commentfab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|end"
+		android:layout_margin="@dimen/fab_margin"
+		android:src="@drawable/ic_edit_white_3x"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true" />
+
+</android.support.design.widget.CoordinatorLayout>
+	
+	
+	
+	
+

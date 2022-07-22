@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.sdzx.news.UserActivity">
+    <item android:id="@+id/action_update"
+        android:title="检查更新"
+        android:icon="@drawable/ic_refresh_white_3x"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+</menu>

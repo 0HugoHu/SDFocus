@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:id="@+id/updatelayoutLinearLayout1">
+
+	<EditText
+	    android:id="@+id/updatelayoutEditText1codename"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:hint="版本名" />
+
+	<EditText
+	    android:id="@+id/updatelayoutEditText1code"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:inputType="number" 
+	    android:hint="版本号(数字)" />
+
+	<EditText
+	    android:id="@+id/updatelayoutEditText1log"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:hint="更新日志"
+	    android:inputType="textMultiLine" />
+
+	<EditText
+	    android:id="@+id/editText1path"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:hint="文件路径"
+	    android:text="/SDFocus/" >
+
+	    <requestFocus />
+	</EditText>
+
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="选取apk"
+		android:onClick="getFile"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="提交"
+		android:onClick="updateClick"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:text="小型文本"
+		android:id="@+id/updatelayoutTextView1"/>
+
+</LinearLayout>
+

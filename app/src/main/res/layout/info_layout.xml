@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:fitsSystemWindows="true"
+	tools:context=".MainActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/infoToolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+	</android.support.design.widget.AppBarLayout>
+
+
+	<ScrollView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_marginTop="?attr/actionBarSize"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="match_parent"
+			xmlns:card_view="http://schemas.android.com/apk/res-auto"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:onClick="onLisenceClick"
+				android:layout_marginTop="3dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginRight="4dp"
+				android:id="@+id/info_promise"
+				android:layout_marginLeft="4dp"
+				card_view:cardElevation="2dp" >
+
+				<RelativeLayout
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/info_xuke"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:text="许可"
+						android:textSize="16.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_xuke2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_xuke"
+						android:text="Focus阅读使用了以下第三方库"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_xuke3"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_xuke2"
+						android:text="\tAndroid Design Support Library\n\tcom.kbeanie:image-chooser-library\n\tcom.rengwuxian.materialedittext\n\tde.hdodenhof:circleimageview\n\tcom.github.traex.rippleeffect\n\tcom.pnikosis:materialish-progress\n\n点击查看开放源代码许可"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp"
+						android:layout_marginBottom="20dp"
+						android:textStyle="bold" />
+
+				</RelativeLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginBottom="10dp"
+				android:id="@+id/info_us"
+				android:layout_marginRight="4dp"
+				android:layout_marginLeft="4dp"
+				card_view:cardElevation="2dp"
+				android:layout_below="@+id/info_promise" >
+
+				<RelativeLayout
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/info_us1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:text="关于我们"
+						android:textSize="16.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_us2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_us1"
+						android:text="Focus阅读经树德中学（宁夏）技术宅社开发，以下是部分开发者成员"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_us3"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_us2"
+						android:text="\t程宇笑\t\t胡亚东\t\t熊典\t\t张毅博\t"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginBottom="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+				</RelativeLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginBottom="10dp"
+				android:id="@+id/info_connect"
+				android:layout_marginRight="4dp"
+				android:layout_marginLeft="4dp"
+				card_view:cardElevation="2dp"
+				android:layout_below="@+id/info_us" >
+
+				<RelativeLayout
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/info_co1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:text="联系方式"
+						android:textSize="16.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="20dp" />
+
+					<TextView
+						android:id="@+id/info_co2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_co1"
+						android:text="\t成都市树德中学(宁夏街校区)技术宅社\n\t官Q:2957075494"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_co3"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_co2"
+						android:text="\tE-mail:2957075494@qq.com\n\t也可以通过应用中的“联系我们”进行反馈"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginBottom="20dp"
+						android:layout_marginRight="20dp"/>
+
+				</RelativeLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginBottom="10dp"
+				android:id="@+id/info_info"
+				android:layout_marginRight="4dp"
+				android:layout_marginLeft="4dp"
+				card_view:cardElevation="2dp"
+				android:layout_below="@+id/info_connect" >
+
+				<RelativeLayout
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/info_info1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:text="应用版本"
+						android:textSize="16.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_info2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_info1"
+						android:text="\tFocus阅读 公测版"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginBottom="5dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_info3"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:text="@string/version_name"
+						android:textSize="14.0sp"
+						android:layout_below="@+id/info_info2"
+						android:layout_alignRight="@+id/info_info2"
+						android:layout_marginBottom="10dp"
+						android:layout_alignEnd="@+id/info_info2" />
+
+				</RelativeLayout>
+			</android.support.v7.widget.CardView>
+
+			<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginBottom="10dp"
+				android:id="@+id/info_process"
+				android:layout_marginRight="4dp"
+				android:layout_marginLeft="4dp"
+				card_view:cardElevation="2dp"
+				android:layout_below="@+id/info_info" >
+
+				<RelativeLayout
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/info_pro1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:text="Focus阅读"
+						android:textSize="16.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+					<TextView
+						android:id="@+id/info_pro2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#616161"
+						android:layout_below="@+id/info_pro1"
+						android:text="\t发现价值，传递感动。"
+						android:textSize="14.0sp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginBottom="20dp"
+						android:layout_marginRight="20dp"
+						android:layout_marginTop="10dp" />
+
+				</RelativeLayout>
+			</android.support.v7.widget.CardView>
+			<!--
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="SDFocus管理员工具"
+                android:onClick="manageClick"/>
+        -->
+
+		</RelativeLayout>
+	</ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+

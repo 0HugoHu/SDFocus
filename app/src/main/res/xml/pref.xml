@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--<PreferenceCategory android:title="First Category">
+        <ListPreference
+            android:key="list_key"
+            android:defaultValue="list key default value"
+            android:title="list title"
+            android:summary="list_summary"
+            android:entries="@array/list_preference"
+            android:entryValues="@array/list_preference"
+            android:dialogTitle="list_dialog_title" />
+    </PreferenceCategory>
+        <EditTextPreference
+            android:key="edittext_key"
+            android:defaultValue="edit default value"
+            android:summary="edit summary"
+            android:title="edit title" />-->
+    <PreferenceCategory android:title="通用设置">
+        <CheckBoxPreference
+            android:key="IfLoadImg"
+            android:defaultValue="true"
+            android:summary="关闭以节省流量"
+            android:title="加载图片"
+            />
+
+        <CheckBoxPreference
+            android:key="SHOW_SHARE_NOTE"
+            android:defaultValue="true"
+            android:summary="关闭则不能获得分享积分"
+            android:title="提醒每日分享"
+            />
+        <!--<EditTextPreference
+            android:key="num_key"
+            android:defaultValue="0"
+            android:summary="edit summary"
+            android:numeric="integer"
+            android:title="input number" />-->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="用户">
+        <Preference
+            android:key="show_user"
+            android:summary="显示用户详情"
+            android:title="我的用户"
+            />
+        <!--<EditTextPreference
+            android:key="num_key"
+            android:defaultValue="0"
+            android:summary="edit summary"
+            android:numeric="integer"
+            android:title="input number" />-->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="高级">
+        <Preference
+            android:key="clear_cache"
+            android:enabled="true"
+            android:summary="下一次将重新加载图片"
+            android:title="清除图片缓存" />
+
+        <Preference
+            android:key="clear_help_flag"
+            android:enabled="true"
+            android:summary="还原默认设置"
+            android:title="清除所有标记" />
+    </PreferenceCategory>
+</PreferenceScreen>

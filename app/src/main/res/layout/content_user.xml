@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/userScrollview2"
+    tools:context="com.sdzx.news.UserActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/userLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            card_view:cardElevation="4dp"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/view2">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/userActivityUsernameTv"
+                        android:textSize="20sp"
+                        android:layout_margin="15dp"
+                        android:text="用户名"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textSize="12sp"
+                    android:text="积分："
+                    android:id="@+id/textView2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:text="0"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/userActivityScoreTextView"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignStart="@+id/textView2" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textSize="12sp"
+                    android:text="用户组："
+                    android:id="@+id/textView3" />
+
+                <LinearLayout
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:layout_width="120dp"
+                    android:layout_below="@+id/textView3"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_alignStart="@+id/textView3">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:text="普通用户"
+                        android:padding="5dp"
+                        android:id="@+id/UserActivityUserlevelTextView1"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="onLevelClick"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="等级："
+                        android:id="@+id/textView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <LinearLayout
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:layout_width="120dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/linearLayout3"
+                        android:layout_below="@+id/textView"
+                        android:layout_alignLeft="@+id/textView"
+                        android:layout_alignStart="@+id/textView">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:text="Cu"
+                            android:padding="5dp"
+                            android:id="@+id/UserActivityUserScorelevelTextView1"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userprogressBar"
+            android:layout_gravity="center_horizontal" />
+
+        <com.sdzx.news.views.ListViewForScrollView
+                android:id="@+id/UserActivityListView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content">
+
+            </com.sdzx.news.views.ListViewForScrollView>
+
+
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
